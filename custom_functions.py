@@ -1,16 +1,14 @@
-# Import your Spyder here
-
+from VakifBankSpyder import VakifBankSpyder
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 
 def make_spyder():
     
-    url = ''
+    url = 'https://subesizbankacilik.vakifbank.com.tr/gunlukfinans/SubesizBankacilik/GunlukDovizKurlari.aspx'
 
     options = FirefoxOptions()
-    options.headless = True
+    options.headless = False
 
-    # TODO: replace with an instance of your bank spyder
-    spyder = CustomSpyderNameHere(url=url, options=options)
+    spyder = VakifBankSpyder(url=url, options=options)
 
     return spyder
